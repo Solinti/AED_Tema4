@@ -58,7 +58,7 @@ public class Formulario {
 						txtDato.setText("");
 					}
 					else {
-						JOptionPane.showMessageDialog(frame, "Caja de texto vacia", "Advertencia", JOptionPane.WARNING_MESSAGE);
+						JOptionPane.showMessageDialog("Caja de texto vacia", "Advertencia", JOptionPane.WARNING_MESSAGE)
 					}
 				}
 		});

@@ -2,7 +2,6 @@ package interfaz;
 
 //SWING ES TODO LO QUE FORMULARIO
 import javax.swing.*;
-import java.awt.event.*;
 
 public class Formulario {
 
@@ -48,20 +47,6 @@ public class Formulario {
 		JButton btnProcesar = new JButton("Procesar");
 		btnProcesar.setBounds(420, 30, 120, 20);
 		panel.add(btnProcesar);
-		
-		//PROGRAMANDO BOTON PROCESAR
-		btnProcesar.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String dato = txtDato.getText();
-					if(!dato.isEmpty()) {
-						area.append(dato +"\n");
-						txtDato.setText("");
-					}
-					else {
-						JOptionPane.showMessageDialog(frame, "Caja de texto vacia", "Advertencia", JOptionPane.WARNING_MESSAGE);
-					}
-				}
-		});
 		
 		frame.setVisible(true);
 	}

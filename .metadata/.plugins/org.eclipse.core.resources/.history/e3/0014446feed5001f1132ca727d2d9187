@@ -57,9 +57,7 @@ public class Formulario {
 						area.append(dato +"\n");
 						txtDato.setText("");
 					}
-					else {
-						JOptionPane.showMessageDialog(frame, "Caja de texto vacia", "Advertencia", JOptionPane.WARNING_MESSAGE);
-					}
+					
 				}
 		});
 		
