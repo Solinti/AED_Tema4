@@ -1,0 +1,18 @@
+package interfaz;
+
+//SWING ES TODO LO QUE FORMULARIO
+import javax.swing.*;
+
+public class Formulario {
+
+	public static void main(String[] args) {
+		
+
+	}
+	
+	public void ventana() {
+		//CREANDO VENTANA
+		JFrame  frame = new JFrame();
+	}
+
+}

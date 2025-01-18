@@ -1,0 +1,23 @@
+package interfaz;
+
+//SWING ES TODO LO QUE FORMULARIO
+import javax.swing.*;
+
+public class Formulario {
+
+	public static void main(String[] args) {
+		Formulario f = new Formulario();
+		
+		f.ventana();
+
+	}
+	
+	public void ventana() {
+		//CREANDO VENTANA
+		JFrame  frame = new JFrame();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setVisible(true);
+		
+	}
+
+}

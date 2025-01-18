@@ -1,0 +1,40 @@
+package interfaz;
+
+//SWING ES TODO LO QUE FORMULARIO
+import javax.swing.*;
+
+public class Formulario {
+
+	public static void main(String[] args) {
+		Formulario f = new Formulario();
+		
+		f.ventana();
+
+	}
+	
+	public void ventana() {
+		//CREANDO VENTANA
+		JFrame  frame = new JFrame("Semana 4 - Cadena de texto");
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(600,600);
+		
+		
+		//CREAR PANEL
+		JPanel panel = new JPanel();
+		frame.setContentPane(panel);
+		panel.setLayout(null);
+		
+		//CREANDO ETIQUETA DATO JLabel = lbl
+		JLabel lblTexto = new JLabel("Ingrese texto: ");
+		lblTexto.setBounds(20, 30, 200, 20);
+		panel.add(lblTexto);
+		
+		//CAJA DE TEXTO
+		JTextField txtDato = new JTextField();
+		txtDato.setBounds(100, 30, 200, 20);
+		txtDato.add(lblTexto);
+		
+		frame.setVisible(true);
+	}
+
+}
