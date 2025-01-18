@@ -1,0 +1,10 @@
+package semana_04;
+
+public class Libreria {
+	
+	//Esto es para borrar el espacio del inicio
+	public static String eliminarEspacio(String dato) {
+		return dato.trim();
+	}
+	
+}

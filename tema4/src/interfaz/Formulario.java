@@ -2,13 +2,16 @@ package interfaz;
 
 //SWING ES TODO LO QUE FORMULARIO
 import javax.swing.*;
+
+import semana_04.Libreria;
+
+import java.awt.Font;
 import java.awt.event.*;
 
 public class Formulario {
 
 	public static void main(String[] args) {
 		Formulario f = new Formulario();
-		
 		f.ventana();
 
 	}
@@ -42,6 +45,8 @@ public class Formulario {
 		
 		//Creando text area
 		JTextArea area = new JTextArea();
+		//esto es para que el txtArea es ordenado "Orden :"
+		area.setFont(new Font("Monospaced", Font.PLAIN, 13));
 		scroll.setViewportView(area);
 		
 		//CREANDO BOTON
@@ -52,9 +57,18 @@ public class Formulario {
 		//PROGRAMANDO BOTON PROCESAR
 		btnProcesar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//AL FINAL DE getText(); se puede agregar un .trim() y borrar los del append
 				String dato = txtDato.getText();
+				
+				Libreria l = new Libreria();
+				
 					if(!dato.isEmpty()) {
-						area.append(dato +"\n");
+						area.append("Ingreso de texto valido  :"+l.eliminarEspacio(dato) +"\n");
+						area.append("Longitud de texto valido :"+l.longitudSinAjuste(dato) +"\n");
+						area.append("Primer carecter          :"+l.primerCarecter(dato.trim()) +"\n");
+						area.append("Ultimo carecter          :"+l.ultimoCaracter(dato.trim()) +"\n");
+						area.append("");
+						area.append("Texto ajustado           :"+l.textoAjustado(dato.trim())+"\n");
 						txtDato.setText("");
 					}
 					else {
